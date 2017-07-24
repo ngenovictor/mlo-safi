@@ -1,1 +1,8 @@
+<div class="container">
+  {{#each model as |fooditem|}}
+  {{fooditem.name}}
+  {{fooditem.price}}
+  <img src={{fooditem.image}} alt="">
+  {{/each}}
 
+</div>
