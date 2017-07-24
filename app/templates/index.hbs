@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Main Meal</h1>
+  {{#each model.mainmeal as |fooditem|}}
+  {{view-fooditem fooditem=fooditem}}
+  {{/each}}
+  <h1>Alcoholic drinks</h1>
+  {{#each model.alcohol as |fooditem|}}
+  {{view-fooditem fooditem=fooditem}}
+  {{/each}}
+
+</div>

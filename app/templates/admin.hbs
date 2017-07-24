@@ -1,0 +1,13 @@
+<div class="container v">
+	<div class="row">
+		<div class="col-md-3">
+			{{#each model as |fooditem|}}
+				<p>{{fooditem.name}}</p>	
+				<p>{{fooditem.description}}</p>
+			{{/each}}
+		</div>
+		<div class="col-md-9">
+			{{new-food-item submitNewItem='submitNewItem'}}
+		</div>
+	</div>
+</div>
