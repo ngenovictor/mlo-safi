@@ -1,74 +1,58 @@
-<div class="container v">
-	<div class="row">
-		<div class="col-md-3">
-			Created items will go here
+{{#if isCreateItemForm}}
+	<h2>Add Food Items that will go to the menu:</h2>
+	<form>
+		<div class="col-md-6">
+
+			<div class="form-group">
+				<label for="name">Name:</label>
+				{{input type="text" name="name" id="name" class="form-control v" value=name}}
+			</div>
+
+			<div class="form-group">
+				<label for="category">Category</label>
+				{{!-- {{input type="text" name="category" id="category" class="form-control v" value=category}} --}}
+				<select onchange={{action 'selectCategory' value='target.value'}} name="category" id="category" class="form-control" >
+					<option disabled selected>--Choose a category--</option>
+					<option value="mainmeal">Main Meal</option>
+					<option value="hotdrinks">Drinks</option>
+					<option value="colddrinks">Drinks</option>
+					<option value="vegan">Vegan</option>
+					<option value="dessert">Dessert</option>
+					<option value="breakfast">BreakFast</option>
+					<option value="snacks">Snacks</option>
+					<option value="alcohol">Alcoholic Drinks</option>
+				</select>
+			</div>
 		</div>
-		<div class="col-md-9">
-			{{#if isCreateItemForm}}
-				<h2>Add Food Items that will go to the menu:</h2>
-				<form>
-					<div class="col-md-6">
 
-						<div class="form-group">
-							<label for="name">Name:</label>
-							{{input type="text" name="name" id="name" class="form-control v" value=name}}
-						</div>
-
-						<div class="form-group">
-							<label for="category">Category</label>
-							{{!-- {{input type="text" name="category" id="category" class="form-control v" value=category}} --}}
-							<select onchange={{action 'selectCategory' value='target.value'}} name="category" id="category" class="form-control" >
-								<option disabled selected>--Choose a category--</option>
-								<option value="mainmeal">Main Meal</option>
-								<option value="hotdrinks">Drinks</option>
-								<option value="colddrinks">Drinks</option>
-								<option value="vegan">Vegan</option>
-								<option value="dessert">Dessert</option>
-								<option value="breakfast">BreakFast</option>
-								<option value="snacks">Snacks</option>
-								<option value="alcohol">Alcoholic Drinks</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="price">Price:</label>
-							{{input type="number" name="price" id="price" class="form-control v" value=price}}
-						</div>
-						<div class="form-group">
-							<label for="preparation_time">Time to Prepare:</label>
-							{{input type="number" name="preparation_time" id="preparation_time" class="form-control v" value=preparation_time}}
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="image">Image Url:</label>
-							{{input type="text" name="image" id="image" class="form-control v" value=image}}
-						</div>
-						
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="description">Description:</label>
-							{{textarea name="description" id="description" class="form-control v" value=description}}
-						</div>
-						<button class="btn btn-default v" {{action 'submit'}}>Submit Item</button>
-						<button class="btn btn-default pull-right v" {{action 'cancel'}}>Cancel</button>
-					</div>
-				</form>
-			{{else}}
-				<div class="col-md-9">
-						<button class="btn btn-default v" {{action 'showForm'}}>New Food Item</button>
-				</div>
-			{{/if}}
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="price">Price:</label>
+				{{input type="number" name="price" id="price" class="form-control v" value=price}}
+			</div>
+			<div class="form-group">
+				<label for="preparation_time">Time to Prepare:</label>
+				{{input type="time" name="preparation_time" id="preparation_time" class="form-control v" value=preparation_time}}
+			</div>
 		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="image">Image Url:</label>
+				{{input type="text" name="image" id="image" class="form-control v" value=image}}
+			</div>
+			
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="description">Description:</label>
+				{{textarea name="description" id="description" class="form-control v" value=description}}
+			</div>
+			<button class="btn btn-default v" {{action 'submit'}}>Submit Item</button>
+			<button class="btn btn-default pull-right v" {{action 'cancel'}}>Cancel</button>
+		</div>
+	</form>
+{{else}}
+	<div class="col-md-9">
+			<button class="btn btn-default v" {{action 'showForm'}}>New Food Item</button>
 	</div>
-</div>
-
-{{!-- 	// name: DS.attr(),
-	// description: DS.attr(),
-	// price: DS.attr(),
-	// category: DS.attr(),
-	// preparation_time: DS.attr()
-	// image --}}
+{{/if}}
