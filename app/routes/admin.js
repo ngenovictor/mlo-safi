@@ -2,7 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model(){
-		return this.store.findAll('fooditem');
+		return this.store.query('fooditem',{
+			limitToLast:5
+		});
 	},
 	actions:{
 		submitNewItem(params){
