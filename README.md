@@ -26,3 +26,8 @@
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
+### Contributors
+1. [Victor Ngeno](https://github.com/ngenovictor)
+2. 
+3. 
+
