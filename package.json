@@ -5,10 +5,12 @@
   "license": "MIT",
   "author": "",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngenovictor/mlo-safi.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -41,5 +43,11 @@
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "main": ".eslintrc.js",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/ngenovictor/mlo-safi/issues"
+  },
+  "homepage": "https://github.com/ngenovictor/mlo-safi#readme"
 }
