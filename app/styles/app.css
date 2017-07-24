@@ -1,5 +1,14 @@
 /*Victor*/
-
+.btn.v{
+	border-radius: 0px;
+	background-color: grey;
+}
+div.container.v{
+	padding-top: 10px;
+}
+.form-control.v{
+	border-radius: 0px;
+}
 /*Victor*/
 /*Emmanu*/
 
