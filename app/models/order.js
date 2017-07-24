@@ -7,5 +7,6 @@ export default DS.Model.extend({
 	total_price: DS.attr(),
 	table_number: DS.attr(),
 	customer_id: DS.attr(),
-	tray_number: DS.attr()
+	tray_number: DS.attr(),
+	quantity: DS.attr()
 });

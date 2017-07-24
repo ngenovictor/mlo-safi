@@ -9,6 +9,16 @@ div.container.v{
 .form-control.v{
 	border-radius: 0px;
 }
+div.admin-products .top-bar{
+	width:100%;
+	height: 100px;
+	background-color: red;
+}
+.btn.v.category{
+	width: 100%;
+	margin-left:-15px;
+	margin-right: -15px; 
+}
 /*Victor*/
 /*Emmanu*/
 #footer {

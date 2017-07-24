@@ -1,0 +1,14 @@
+{{#each orderBasket2 as |item|}}
+<div class="row">
+  <div class="col-xs-9">
+    {{item.quantity}}
+    {{item.name}}
+  </div>
+  <div class="col-xs-3">
+    {{item.price}}
+  </div>
+</div>
+
+{{/each}}
+{{totalPrice}}
+<button{{action 'makeOrder'}}>Place Order</button>
