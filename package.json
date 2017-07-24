@@ -5,18 +5,22 @@
   "license": "MIT",
   "author": "",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngenovictor/mlo-safi.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember test"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
+    "ember-bootstrap": "^1.0.0-beta.2",
     "ember-cli": "2.13.2",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.0.0",
@@ -41,5 +45,11 @@
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "main": ".eslintrc.js",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/ngenovictor/mlo-safi/issues"
+  },
+  "homepage": "https://github.com/ngenovictor/mlo-safi#readme"
 }
