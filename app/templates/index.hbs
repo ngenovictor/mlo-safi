@@ -1,8 +1,11 @@
 <div class="container">
-  {{#each model as |fooditem|}}
-  {{fooditem.name}}
-  {{fooditem.price}}
-  <img src={{fooditem.image}} alt="">
+  <h1>Main Meal</h1>
+  {{#each model.mainmeal as |fooditem|}}
+  {{view-fooditem fooditem=fooditem}}
+  {{/each}}
+  <h1>Alcoholic drinks</h1>
+  {{#each model.alcohol as |fooditem|}}
+  {{view-fooditem fooditem=fooditem}}
   {{/each}}
 
 </div>
