@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-	fooditem: DS.hasMany('fooditems',{async:true}),
+	fooditem: DS.hasMany('fooditem',{async:true}),
 	date_created: DS.attr(),
 	processed_status: DS.attr(),
 	total_price: DS.attr(),
