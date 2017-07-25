@@ -4,14 +4,14 @@ export default Ember.Route.extend({
   model() {
   return this.store.query('order', {
         orderBy: 'processed_status',
-        equalTo: 'serve',
+        equalTo: 'pay',
 
   })
 },
 actions:{
-  payment(order){
+  save(order){
     var params = {
-      processed_status: "pay",
+      processed_status: "done",
       fooditem:this.get('fooditem'),
       date_created:this.get('fooditem'),
       total_price:this.get('fooditem'),
