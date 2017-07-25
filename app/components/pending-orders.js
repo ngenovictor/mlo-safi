@@ -13,13 +13,13 @@ export default Ember.Component.extend({
     selectOrder(order){
       var params = {
         processed_status: "cooking",
-        fooditem: this.get('fooditem'),
-      	date_created: this.get('fooditem'),
-      	total_price: this.get('fooditem'),
-      	table_number: this.get('fooditem'),
-      	customer_id: this.get('fooditem'),
-      	tray_number: this.get('fooditem'),
-      	quantity: this.get('fooditem'),
+        fooditem:this.get('fooditem'),
+      	date_created:this.get('fooditem'),
+      	total_price:this.get('fooditem'),
+      	table_number:this.get('fooditem'),
+      	customer_id:this.get('fooditem'),
+      	tray_number:this.get('fooditem'),
+      	quantity:this.get('fooditem'),
       };
       if(confirm("Are you sure")){
         this.sendAction('update', order, params);
