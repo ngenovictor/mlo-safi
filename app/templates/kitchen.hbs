@@ -3,6 +3,7 @@
     <h2>Mlo Safi Kitchen Service</h2>
     <hr>
     <h3>Pending Orders</h3>
-    <button class="btn btn-success" {{action 'view' order}}>Orders</button> {{pending-orders order=model}}
+
+    {{pending-orders orders=model update="update"}}
   </div>
   </div>
