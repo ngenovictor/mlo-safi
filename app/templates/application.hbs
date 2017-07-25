@@ -8,14 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
 
-      </button> {{ link-to 'mlo-safi' 'index' class="navbar-brand" }}
+      </button>
 
     <ul class="nav navbar-nav">
-      <li>{{ link-to 'Homepage' 'index' }}</li>
-      <li>{{ link-to 'admin' 'admin' }}</li>
-      <li>{{ link-to 'kitchen' 'kitchen' }}</li>
-      <!-- <li>{{ link-to 'fooditem' 'fooditem' }}</li> -->
-      <!-- <li>{{ link-to 'payment' 'Payment' }}</li> -->
+      <li>{{#link-to  'index' }}Homepage{{/link-to}}</li>
+      <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
+      <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
+
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

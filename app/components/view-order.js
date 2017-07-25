@@ -10,7 +10,12 @@ export default Ember.Component.extend({
 
     },0);
   }),
-  actions:{
+  actions: {
+    removeItem(item) {
+      this.get('orderBasket').remove(item);
+    },
+
+
     makeOrder(){
 
       var params = {
@@ -25,5 +30,5 @@ export default Ember.Component.extend({
       this.sendAction('confirmOrder',params);
     }
   }
-  
+
 });
