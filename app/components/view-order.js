@@ -29,11 +29,11 @@ export default Ember.Component.extend({
 
     },0);
   }),
-  // actions: {
-  //   removeItem(item) {
-  //     this.get('orderBasket').removeObject(item);
-  //   }
-  //
-  //   }
+  actions: {
+    removeItem(item) {
+      this.get('orderBasket').remove(item);
+    }
+
+    }
 
 });

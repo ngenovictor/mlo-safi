@@ -11,20 +11,22 @@ div.container.v{
 }
 /*Victor*/
 /*Emmanu*/
+#top-bar {
+	width: 100%;
+}
 #footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 360px;
-	background-image: url("http://images.cdn.fotopedia.com/_avPIZmqM3w-7z161LH_268-hd.jpg");
-  background:
+	background:
   /* color overlay */
-    /*linear-gradient(
+    linear-gradient(
       rgba(240, 212, 0, 0.45),
       rgba(0, 0, 0, 0.45)
-    ),*/
+    ),
     /* image to overlay */
+    url(http://images.cdn.fotopedia.com/_avPIZmqM3w-7z161LH_268-hd.jpg);
 }
 
 .social li {
@@ -59,6 +61,9 @@ div.container.v{
 
 .social li a {
 	color: #EDEFF1;
+	font-size: 16px;
+	margin: 0 0 0 5px;
+	color: #EDEFF1 !important;
 }
 
 .social li:hover {
