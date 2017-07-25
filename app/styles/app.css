@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*Victor*/
 .btn.v{
 	border-radius: 0px;
@@ -19,18 +17,18 @@ div.admin-products .top-bar{
 .btn.v.category{
 	width: 100%;
 	margin-left:-15px;
-	margin-right: -15px; 
+	margin-right: -15px;
 }
 .cartplus{
 	margin-top:10px;
 }
 div.jumbotron.orders{
-	padding:5px; 
+	padding:5px;
 }
 /*Victor*/
 /*Emmanu*/
-#top-bar {
-	width: 100%;
+.navbar.navbar-inverse {
+	border-radius: 0px;
 }
 #footer {
   bottom: 0;
