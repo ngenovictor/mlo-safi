@@ -1,29 +1,26 @@
 <div class="row pending-order">
 
-{{#each orders as |order| }}
-  {{order.fooditems}}
-  {{#each order.fooditems as |fooditem|}}
-  vh{{fooditem.name}}
-  {{/each}}
-  <div class="col-xs-7">
-    <div class="row">
-      Date:
-      {{order.date_created}}
-    </div>
-    
-    <div class="row tray_number">
-      Tray:
-      {{order.tray_number}}
-    </div>
+  {{#each orders as |order| }}
+    {{order.fooditems}}
+    {{#each order.fooditems as |fooditem|}}
+      {{fooditem.name}}
+    {{/each}}
+    <div class="col-xs-7">
+      <div class="row">
+        Date: {{order.date_created}}
+      </div>
 
-  </div>
-  <div class="col-xs-2 table-number">
-    Table:
-      {{order.table_number}}
-  </div>
-  <button class="btn btn-primary" {{action 'selectOrder' order}} >Select Order</button><br>
-  <button class="btn btn-danger" {{action 'removeOrder' order}} >Done</button>
-{{/each}}
+      <div class="row tray_number">
+        Tray: {{order.tray_number}}
+      </div>
+
+    </div>
+    <div class="col-xs-2 table-number">
+      Table: {{order.table_number}}
+    </div>
+    <button class="btn btn-primary" {{action 'selectOrder' order}}>Select Order</button><br>
+    <button class="btn btn-danger" {{action 'removeOrder' order}}>Done</button>
+  {{/each}}
 </div>
 
 <br>
