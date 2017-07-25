@@ -5,6 +5,7 @@ export default Ember.Component.extend({
 
   actions: {
     addToCart(item) {
+    	console.log(item.name);
       this.get('orderBasket').add(item);
     }
   }
