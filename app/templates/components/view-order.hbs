@@ -1,3 +1,6 @@
+<div class="jumbotron">
+<h3>Your Order</h3>
+<hr>
 {{#each orderBasket.items as |item|}}
 <div class="row">
   <div class="col-xs-9">
@@ -12,3 +15,4 @@
 {{/each}}
 {{totalPrice}}
 <button{{action 'makeOrder'}}>Place Order</button>
+</div>
