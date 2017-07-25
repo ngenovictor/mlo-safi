@@ -32,8 +32,8 @@
 				<label for="customer_id">Customer ID:</label>
 				{{input type="number" name="customer_id" value=customer_id placeholder="Enter Customer Id"  class="form-control"}}
 			</div>
+			<button type="submit" {{action 'makeOrder'}} clas>Place Order</button>
 		</form>
-		<button{{action 'makeOrder'}}>Place Order</button>
 	{{else}}
 	<p>Click on the plus sign on each item to add to your order basket</p>
 	<button class="btn btn-danger">Call For Assistance</button>

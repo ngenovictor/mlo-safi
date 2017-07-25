@@ -27,7 +27,7 @@ export default Ember.Component.extend({
       };
       if(confirm("Are you sure you want to place that order?")){
         this.sendAction('confirmOrder',params);
-      };
+      }
     }
   }
 });
