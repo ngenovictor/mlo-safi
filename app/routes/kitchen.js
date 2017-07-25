@@ -29,6 +29,14 @@ export default Ember.Route.extend({
         }
       });
       order.save();
+    },
+    serve(order, params){
+      Object.keys(params).forEach(function (key) {
+        if (params[key]!==undefined) {
+          order.set(key,params[key]);
+        }
+      });
+      order.save();
     }
    }
 });
