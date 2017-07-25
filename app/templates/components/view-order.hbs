@@ -1,11 +1,14 @@
-{{#each orderBasket2 as |item|}}
+{{#each orderBasket.items as |item|}}
 <div class="row">
-  <div class="col-xs-9">
+  <div class="col-xs-8">
     {{item.quantity}}
     {{item.name}}
   </div>
-  <div class="col-xs-3">
+  <div class="col-xs-2">
     {{item.price}}
+  </div>
+  <div class="col-xs-2">
+<i {{action 'removeItem' item}}class="fa fa-times" aria-hidden="true"></i>
   </div>
 </div>
 

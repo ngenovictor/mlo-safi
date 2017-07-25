@@ -28,5 +28,12 @@ export default Ember.Component.extend({
       return sum+= parseInt(item.get('price'));
 
     },0);
-  })
+  }),
+  // actions: {
+  //   removeItem(item) {
+  //     this.get('orderBasket').removeObject(item);
+  //   }
+  //
+  //   }
+
 });
