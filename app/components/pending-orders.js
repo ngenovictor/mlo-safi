@@ -8,8 +8,6 @@ export default Ember.Component.extend({
 			this.set('isCreatependingOrderForm', true);
 		},
     cancel(){
-
-
 			this.set('isCreatependingOrderForm', false);
 		},
     selectOrder(order){
