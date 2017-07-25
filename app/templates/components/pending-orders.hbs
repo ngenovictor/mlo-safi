@@ -1,11 +1,11 @@
 {{#each model as |order|}}
 {{pending-order orders=order destroyOrder="destroyOrder"}}
 {{order.fooditem}}
-{{order.date_created}} 
+{{order.date_created}}
 {{order.processed_status}}
 {{order.total_price}}
  {{order.table_number}}
  {{order.customer_id}}
  {{order.tray_number}}
 {{/each}}
-<button {{action 'destroyOrder' order}}>Clear Orders</button>
+<button class="btn btn-info"{{action 'destroyOrder' order}}>Clear Orders</button>
