@@ -19,4 +19,11 @@ export default Ember.Route.extend({
     })
 
   },
+  actions:{
+    confirmOrder(params){
+      var newOrder = this.store.createRecord('order', params);
+      newOrder.save();
+      this.transitionTo('index');
+    }
+  }
 });

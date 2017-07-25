@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('admin');
   this.route('fooditem',{path:'admin/fooditem/:fooditem'});
   this.route('kitchen');
+  this.route('checkout');
 });
 
 export default Router;
