@@ -1,17 +1,41 @@
-{{#each orderBasket.items as |item|}}
-<div class="row">
-  <div class="col-xs-8">
-    {{item.quantity}}
-    {{item.name}}
-  </div>
-  <div class="col-xs-2">
-    {{item.price}}
-  </div>
-  <div class="col-xs-2">
-<i {{action 'removeItem' item}}class="fa fa-times" aria-hidden="true"></i>
-  </div>
+<div class="jumbotron orders">
+	{{#if orderBasket.items}}
+		<div class="row">
+		  <div class="col-xs-9">
+		    Name
+		  </div>
+		  <div class="col-xs-3">
+		    Price
+		  </div>
+		</div>
+		{{#each orderBasket.items as |item|}}
+		<div class="row">
+		  <div class="col-xs-9">
+		    {{item.name}}
+		  </div>
+		  <div class="col-xs-3">
+		    {{item.price}}
+		    <i {{action 'removeItem' item}}class="fa fa-times" aria-hidden="true"></i>
+		  </div>
+		</div>
+		{{/each}}
+		<hr>
+		<div>
+			<p><strong>KSH. {{totalPrice}}</strong></p>
+		</div>
+		<form>
+			<div class="form-group">
+				<label for="table">Table No:</label>
+				{{input type="number" name="table" value=table placeholder="Enter table Number" class="form-control"}}
+			</div>
+			<div class="form-group">
+				<label for="customer_id">Customer ID:</label>
+				{{input type="number" name="customer_id" value=customer_id placeholder="Enter Customer Id"  class="form-control"}}
+			</div>
+		</form>
+		<button{{action 'makeOrder'}}>Place Order</button>
+	{{else}}
+	<p>Click on the plus sign on each item to add to your order basket</p>
+	<button class="btn btn-danger">Call For Assistance</button>
+	{{/if}}
 </div>
-
-{{/each}}
-{{totalPrice}}
-<button{{action 'makeOrder'}}>Place Order</button>

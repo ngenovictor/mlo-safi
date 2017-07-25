@@ -2,21 +2,14 @@
   <div class="col-xs-2 foodimage">
     <img src={{fooditem.image}} alt="">
   </div>
-  <div class="col-xs-7">
-    <div class="row">
-      {{fooditem.name}}
-    </div>
-    <div class="row fooddescription">
-      {{fooditem.description}}
-
-    </div>
-
+  <div class="col-xs-6">
+    <p>{{fooditem.name}}</p>
+    <p><span class="fooddescription">{{fooditem.description}}</span></p>
   </div>
   <div class="col-xs-2 foodprice">
-      {{fooditem.price}}
+      <p>KSH.{{fooditem.price}}</p>
   </div>
-  <div class="col-xs-1">
-    <i {{action 'addToCart' fooditem}}class="fa fa-plus-circle fa-4x" aria-hidden="true"></i>
+  <div class="col-xs-2 cartplus">
+    <i {{action 'addToCart' fooditem}} class="fa fa-plus-circle fa-4x" aria-hidden="true"></i>
   </div>
-
 </div>
