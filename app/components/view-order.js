@@ -2,25 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   orderBasket: Ember.inject.service(),
-  orderBasket2:Ember.computed('orderBasket.items.@each',function(){
-
-    this.get('orderBasket.items').reduce(function(mylist, item){
-      if(mylist.includes(item)){
-        item['quantity']+=1;
-
-      }else{
-        item['quantity']=1;
-
-      }
-      mylist.push(item);
-      return mylist;
-
-
-
-    },[]);
-
-
-  }),
   totalPrice:Ember.computed('orderBasket.items.@each.price',function(){
 
     return this.get('orderBasket.items').reduce(function(sum,item){
@@ -32,8 +13,22 @@ export default Ember.Component.extend({
   actions: {
     removeItem(item) {
       this.get('orderBasket').remove(item);
-    }
+    },
 
+
+    makeOrder(){
+
+      var params = {
+        fooditems: this.get('orderBasket.items'),
+        date_created:"today",
+        processed_status:false,
+        total_price: this.get('totalPrice'),
+        table_number:this.get('table'),
+        customer_id:this.get('customer_id'),
+        tray_number:0,
+      };
+      this.sendAction('confirmOrder',params);
     }
+  }
 
 });
