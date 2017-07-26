@@ -47,7 +47,7 @@ div.jumbotron.orders {
 	text-align: center;
 	background-image: url("");
 	background-repeat: no-repeat;
-	background-size: cover;
+  background-size: 100% 250px;
 }
 
 .resize {
