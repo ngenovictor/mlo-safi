@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment'; 
 
 export default Ember.Component.extend({
   orderBasket: Ember.inject.service(),
@@ -14,11 +15,15 @@ export default Ember.Component.extend({
     removeItem(item) {
       this.get('orderBasket').remove(item);
     },
+    showmodal(){
+       $('#myModal').modal('show');
+    },
     makeOrder(){
+      var today = moment().format('YYYY MM D H:mm:ss');
 
       var params = {
         fooditems: this.get('orderBasket.items'),
-        date_created:"today",
+        date_created:today,
         processed_status:"pending",
         total_price: this.get('totalPrice'),
         table_number:this.get('table'),

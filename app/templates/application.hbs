@@ -2,26 +2,30 @@
 <div class="container-fluid navbarthings">
 
   <nav class="navbar navbar-inverse">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
 
-      </button>
+        </button>
+        {{#link-to  'index' class="navbar-brand"}}Mlo Safi{{/link-to}}
+    </div>
+    <div class="collapse navbar-collapse" id="menu-collapse">
+      <ul class="nav navbar-nav">
+        <li>{{#link-to  'index' }}Home{{/link-to}}</li>
+        <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
+        <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
+        <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
 
-    <ul class="nav navbar-nav">
-      <li>{{#link-to  'index' }}Homepage{{/link-to}}</li>
-      <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
-      <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
-      <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
-
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-    <button class="btn btn-danger navbar-btn">Payment</button>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      <button class="btn btn-danger navbar-btn">Payment</button>
+    </div>
 
   </nav>
 </div>
