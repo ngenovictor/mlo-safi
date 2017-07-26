@@ -1,45 +1,48 @@
-
 <div class="row">
-<h3>Pending Orders</h3>
+  <span class="daenerys"><h2>Pending Orders</h2></span>
+
   {{#each orders.pending as |order| }}
 
-  <div class="col-xs-3 pending-order">
-  <div class="row">
-    <h5>Order No.{{order.id}}</h5>
-    {{#each order.fooditems as |fooditem|}}
-      <P>{{fooditem.name}}</p>
-    {{/each}}
-    </div>
+    <div class="col-xs-3 pending-order">
+      <div class="row">
+        <p>Order No.{{order.id}}</p>
+        {{#each order.fooditems as |fooditem|}}
+          <P>{{fooditem.name}}</p>
+        {{/each}}
+      </div>
       <div class="row">
         <P>Date: {{order.date_created}}</p>
 
 
       </div>
 
-    <button class="btn btn-primary" {{action 'selectOrder' order}}>Select Order</button><br>
+      <button class="btn btn-primary" {{action 'selectOrder' order}}>Select Order</button><br>
 
     </div>
   {{/each}}
 </div>
-  <div class="row">
-    <h3>Orders being cooked</h3>
-    {{#each orders.cooking as |order| }}
+
+<div class="row">
+
+  <span class="daenerys"><h2>Orders being cooked</h2></span>
+
+  {{#each orders.cooking as |order| }}
 
     <div class="col-xs-3 pending-order">
-    <div class="row">
-      <h5>Order No.{{order.id}}</h5>
-      {{#each order.fooditems as |fooditem|}}
-        <P>{{fooditem.name}}</p>
-      {{/each}}
+      <div class="row">
+        <p>Order No.{{order.id}}</p>
+        {{#each order.fooditems as |fooditem|}}
+          <P>{{fooditem.name}}</p>
+        {{/each}}
       </div>
-        <div class="row">
-          <P>Date: {{order.date_created}}</p>
+      <div class="row">
+        <P>Date: {{order.date_created}}</p>
 
 
-        </div>
+      </div>
 
 
       <button class="btn btn-danger" {{action 'serveOrder' order}}>Done</button>
-      </div>
-    {{/each}}
-  </div>
+    </div>
+  {{/each}}
+</div>

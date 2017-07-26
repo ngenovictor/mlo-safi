@@ -33,7 +33,18 @@ div.jumbotron.orders {
   padding: 5px;
 }
 
+.snow {
+  margin-left: 50px;
+}
 
+.cersei {
+  text-align: center;
+}
+
+.daenerys {
+  text-align: center;
+  font-weight: bolder;
+}
 /*Victor*/
 
 
