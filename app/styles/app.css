@@ -45,6 +45,9 @@ div.jumbotron.orders {
 
 .tyrion {
 	text-align: center;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .resize {
