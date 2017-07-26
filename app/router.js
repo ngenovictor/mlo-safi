@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('kitchen');
   this.route('checkout');
   this.route('serveorder');
+  this.route('payment');
 });
 
 export default Router;
