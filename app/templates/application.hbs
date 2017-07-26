@@ -1,27 +1,28 @@
 <!-- Header section -->
   <nav class="navbar navbar-inverse">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-
       </button>
+      {{#link-to  'index' class="navbar-brand"}}Mlo Safi{{/link-to}}
+    </div>
+    <div class="collapse navbar-collapse" id="menu-collapse">
+      <ul class="nav navbar-nav">
+        <li>{{#link-to  'index' }}Home{{/link-to}}</li>
+        <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
+        <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
+        <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
+        <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
 
-    <ul class="nav navbar-nav">
-      <li>{{#link-to  'index' }}<strong>Mlo-safi</strong>{{/link-to}}</li>
-      <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
-      <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
-      <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
-      <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
-
-    </ul>
-    <ul class="nav navbar-nav pull-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-
-
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
   </nav>
   {{outlet}}
 
