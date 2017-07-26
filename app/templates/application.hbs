@@ -1,6 +1,4 @@
 <!-- Header section -->
-<div class="container-fluid">
-
   <nav class="navbar navbar-inverse">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -14,17 +12,16 @@
       <li>{{#link-to  'index' }}Homepage{{/link-to}}</li>
       <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
       <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
+      <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
 
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <ul class="nav navbar-nav pull-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
-    <button class="btn btn-danger navbar-btn">Payment</button>
+
 
   </nav>
-</div>
-
   {{outlet}}
 
 <!-- /#Header section -->

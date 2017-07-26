@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <h3>Orders to be served</h3>
+    {{#each model as |order| }}
+
+    <div class="col-xs-3 pending-order">
+    <div class="row">
+      <h5>Order No.{{order.id}}</h5>
+
+      </div>
+        <div class="row">
+          <P>Tray No:{{order.tray_number}} to Table No:{{order.table_number}}</p>
+
+
+        </div>
+
+
+      <button class="btn btn-danger" {{action 'serveOrder' order}}>Done</button>
+      </div>
+    {{/each}}
+  </div>
+
+
+</div>
