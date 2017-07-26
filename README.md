@@ -28,6 +28,6 @@
 
 ### Contributors
 1. [Victor Ngeno](https://github.com/ngenovictor)
-2. 
-3. 
-
+2. [Emmanuel Michira](https://github.com/emichira)
+3. [Elvis Mogaka](https://github.com/mosoti17)
+4. [Derrick Waweru](https:/github.com/derrickwaweru)
