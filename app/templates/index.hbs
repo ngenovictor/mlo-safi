@@ -1,7 +1,12 @@
-<div class="container">
+<div class="row">
+  <div class="col-md-1 logo">
+    <img src="http://www.eatlogos.com/food_and_drinks/png/vector_chief_food_logo.png" class="resize" alt="">
+</div>
+<div class="col-md-11 container">
   <h1>Menu</h1>
+  <hr>
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-8">
       {{#if model.mainmeal}}
         <h2>Main Meal</h2>
         {{#each model.mainmeal as |fooditem|}}
@@ -59,4 +64,5 @@
   </div>
 
 
+</div>
 </div>

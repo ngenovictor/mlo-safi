@@ -34,7 +34,7 @@ div.jumbotron.orders{
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 360px;
+  height: 290px;
 	background:
   /* color overlay */
     linear-gradient(
@@ -91,7 +91,10 @@ margin-left: 70px;
 	background: #2c3e50;
 }
 
-
+.resize {
+width:150%; /* you can use % */
+height: auto;
+}
 /*Emmanu*/
 /*Elvis*/
 .foodimage img{
