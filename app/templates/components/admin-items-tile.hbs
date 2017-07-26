@@ -2,22 +2,84 @@
 	<div class="btn btn-default v category">
 		<h3><strong>Food Category</strong></h3>
 	</div>
-	<div class="btn btn-default v category" {{action 'setCategory' mainmeal}}>
+	<div class="btn btn-default v category" {{action 'mainmeal'}}>
 		<p>Main Meal</p>
 	</div>
-	<div class="btn btn-default v category" {{action 'setCategory' hotdrinks}}>
+	<div class="btn btn-default v category" {{action  'hotdrinks'}}>
 		<p>Hot Drinks</p>
 	</div>
-	<div class="btn btn-default v category" {{action 'setCategory' colddrinks}}>
+	<div class="btn btn-default v category" {{action 'colddrinks'}}>
 		<p>Cold Drinks</p>
 	</div>
-	<div class="btn btn-default v category" {{action 'setCategory' breakfast}}>
+	<div class="btn btn-default v category" {{action 'alcohol'}}>
+		<p>Alcohol</p>
+	</div>
+	<div class="btn btn-default v category" {{action 'breakfast'}}>
 		<p>Break Fast</p>
 	</div>
-	
+	<div class="btn btn-default v category" {{action 'vegan'}}>
+		<p>Vegeterian</p>
+	</div>
+	<div class="btn btn-default v category" {{action 'snacks'}}>
+		<p>Snackls</p>
+	</div>
+	<div class="btn btn-default v category" {{action 'dessert'}}>
+		<p>Desert</p>
+	</div>
+
+
 </div>
 <div class="col-md-9">
-</div>	
+	{{#if mainmealview}}
+		<h2>Main Meal</h2>
+		{{#each model.mainmeal as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+	{{#if breakfastview}}
+		<h2>BreakFast</h2>
+		{{#each model.breakfast as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+	{{#if hotdrinksview }}
+		<h2>Hot Drinks</h2>
+		{{#each model.hotdrinks as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+	{{#if colddrinksview}}
+		<h2>Cold Drinks</h2>
+		{{#each model.colddrinks as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+	{{#if veganview}}
+		<h2>Vegan Dishes</h2>
+		{{#each model.vegan as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+	{{#if dessertview}}
+		<h2>Dessert</h2>
+		{{#each model.dessert as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+	{{#if snacksview}}
+		<h2>Snacks</h2>
+		{{#each model.snacks as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+	{{#if alcoholview}}
+		<h2>Alcoholic Drinks</h2>
+		{{#each model.alcohol as |fooditem|}}
+			{{view-fooditem fooditem=fooditem}}
+		{{/each}}
+	{{/if}}
+
+</div>
 
 
 

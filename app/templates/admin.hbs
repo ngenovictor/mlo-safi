@@ -1,10 +1,10 @@
 <div class="container v">
 	<div class="row">
 		<div class="col-md-3">
-			{{#each model as |fooditem|}}
-				<p>{{fooditem.name}}</p>	
+			<!-- {{#each model as |fooditem|}}
+				<p>{{fooditem.name}}</p>
 				<p>{{fooditem.description}}</p>
-			{{/each}}
+			{{/each}} -->
 		</div>
 		<div class="col-md-9">
 			{{new-food-item submitNewItem='submitNewItem'}}
@@ -13,7 +13,7 @@
 	<div class="container row admin-products">
 		<div class="top-bar">
 			Browse Products Below
-		</div>		
-		{{admin-items-tile}}
+		</div>
+		{{admin-items-tile model=model}}
 	</div>
 </div>
