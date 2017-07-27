@@ -14,29 +14,22 @@
     <div class="collapse navbar-collapse" id="menu-collapse">
       <ul class="nav navbar-nav">
         <li>{{#link-to  'index' }}Home{{/link-to}}</li>
-        <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
-        <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
-        <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
-        <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Custom Order<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li>{{#link-to 'customorder' 'coffee'}}Coffee{{/link-to}}</li>
-            <li>{{#link-to 'customorder' 'ice-cream'}}Ice Cream{{/link-to}}</li>
-          </ul>
-        </li>
-        <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
-
-
-    </ul>
-
+        {{#if session.isAuthenticated}}
+          <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
+          <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
+          <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
+          <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
+        {{/if}}
+      </ul>
     <ul class="nav navbar-nav pull-right">
-      <li>{{#link-to 'login'}}<span class="glyphicon glyphicon-user"></span> Sign Up{{/link-to}}</li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      {{#if session.isAuthenticated}}
+      <li><a href="#" {{action 'signOut'}}>sign Out</a></li>
+      {{else}}
+      {{login-form signIn='signIn'}}
+      {{/if}}
     </ul>
   </div>
-
-
-  </nav>
+</nav>
 <div class="container">
   {{outlet}}
 
@@ -83,7 +76,7 @@
           <ul class="list-inline center-block social">
             <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
             <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-            <li> <a href="#"> <i class="fa fa-envelope-o">   </i> </a> </li>
+            <li> <a href="mlosafi123@gmail.com"> <i class="fa fa-envelope-o">   </i> </a> </li>
             <li> <a href="#"> <i class="fa fa-github">   </i> </a> </li>
             <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
           </ul>

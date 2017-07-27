@@ -205,10 +205,17 @@ body {
 
 
 /*Derrick*/
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Baloo Bhai);
 
 body{
    font-family: 'Baloo Bhai';
+=======
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+   font-family: 'Open Sans',serif;
+>>>>>>> 4edfb0de498d88aeadf8f7374b68eefec609e22a
 }
 
 /*Derrick*/
