@@ -1,3 +1,5 @@
+<!-- Part 1: Wrap all page content here -->
+<div id="wrap">
 <!-- Header section -->
   <nav class="navbar navbar-inverse">
     <div class="navbar-header">
@@ -16,6 +18,12 @@
         <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
         <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
         <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Custom Order<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
         <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
       {{/if}}
 
@@ -33,13 +41,18 @@
 
 
   </nav>
+<div class="container">
   {{outlet}}
+
+  <div id="push"></div>
+
+</div>
 
 <!-- /#Header section -->
 
 <!-- Footer Section-->
 
-<footer id="footer">
+<footer class="footer">
   <div class="container">
     <div class="row">
       <br>
@@ -98,3 +111,4 @@
   </div>
 </footer>
 <!-- /#footer -->
+</div>
