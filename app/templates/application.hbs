@@ -1,26 +1,28 @@
 <!-- Header section -->
   <nav class="navbar navbar-inverse">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-
       </button>
+      {{#link-to  'index' class="navbar-brand"}}Mlo Safi{{/link-to}}
+    </div>
+    <div class="collapse navbar-collapse" id="menu-collapse">
+      <ul class="nav navbar-nav">
+        <li>{{#link-to  'index' }}Home{{/link-to}}</li>
+        <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
+        <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
+        <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
+        <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
 
-    <ul class="nav navbar-nav">
-      <li>{{#link-to  'index' }}Homepage{{/link-to}}</li>
-      <li>{{#link-to  'admin' }}Admin{{/link-to}}</li>
-      <li>{{#link-to  'kitchen' }}Kitchen{{/link-to}}</li>
-      <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
-
-    </ul>
-    <ul class="nav navbar-nav pull-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-
-
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
   </nav>
   {{outlet}}
 
@@ -31,41 +33,50 @@
 <footer id="footer">
   <div class="container">
     <div class="row">
-      <h3 class="footertext">About Us:</h3>
       <br>
+      <!--First column-->
       <div class="col-md-4">
         <center>
           <img src="https://www.graphicsprings.com/filestorage/stencils/e63db7d40e258b982093c455e5426b83.svg">
           <br>
           <h4 class="footertext">About Us</h4>
-          <p class="footertext">mlo-safi is a digital disruption software for the hospitality industry.</p><br>
+          <p class="footertext"><a href="#!">mlo-safi team.</a></p><br>
         </center>
       </div>
+      <!-- /.First column-->
+      <!--Second column-->
       <div class="col-md-4">
         <center>
           <img src ="https://www.graphicsprings.com/filestorage/stencils/49e65bf09cfc775184bceeb2884027e6.svg">
           <br>
           <h4 class="footertext">Services</h4>
-          <p class="footertext">We offer the following services.</p><br>
+          <p class="footertext"><a href="#!">We offer the following services.</a></p><br>
         </center>
       </div>
+      <!-- /.Second column-->
+      <!--Third column-->
+
       <div class="col-md-4">
         <center>
           <img src="https://www.graphicsprings.com/filestorage/stencils/af3de2a2d50da154065d433298434b2d.svg" class="img-circle" alt="...">
           <br>
           <h4 class="footertext">Contact us</h4>
-          <p class="footertext">
-            <ul class="list-inline center-block social">
-              <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
-            </ul>
-          </p><br>
+          <div id="ikons">
+          <ul class="list-inline center-block social">
+            <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-envelope-o">   </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-github">   </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+          </ul>
+        </div>
         </center>
       </div>
+      <!-- /.Third column-->
+
     </div>
+    <!--Copyright-->
+
     <div class="row">
       <p>
         <center>
@@ -73,6 +84,8 @@
         </center>
       </p>
     </div>
+    <!--/.Copyright-->
+
   </div>
 </footer>
 <!-- /#footer -->
