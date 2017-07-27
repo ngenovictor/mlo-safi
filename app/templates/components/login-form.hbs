@@ -1,8 +1,8 @@
 <div >
-  <form {{action 'submit' on='submit'}}>
+  <form>
     <div class="form-group">
       <label for="password">Email</label>
-      {{input value=identification class="form-control"}}
+      {{input value=email class="form-control"}}
 
     </div>
     <div class="form-group">
@@ -10,7 +10,7 @@
       {{input type="password" value=password class="form-control"}}
 
     </div>
-    <button type="submit" name="btn btn-primary">Login</button>
+    <button {{action 'signIn'}}>Sign in</button>
   </form>
 
 </div>
