@@ -13,8 +13,6 @@ Router.map(function() {
   this.route('checkout');
   this.route('serveorder');
   this.route('payment');
-  this.route('customorder',{path:':fooditem'});
-  this.route('login');
 });
 
 export default Router;
