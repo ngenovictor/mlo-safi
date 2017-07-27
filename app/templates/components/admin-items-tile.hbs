@@ -34,48 +34,64 @@
 		<h2>Main Meal</h2>
 		{{#each model.mainmeal as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
+			{{admin-view fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if breakfastview}}
 		<h2>BreakFast</h2>
 		{{#each model.breakfast as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
+			{{admin-view fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if hotdrinksview }}
 		<h2>Hot Drinks</h2>
 		{{#each model.hotdrinks as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
+			{{admin-view fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if colddrinksview}}
 		<h2>Cold Drinks</h2>
 		{{#each model.colddrinks as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
+			{{admin-view fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if veganview}}
 		<h2>Vegan Dishes</h2>
 		{{#each model.vegan as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
+			{{admin-view fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if dessertview}}
 		<h2>Dessert</h2>
 		{{#each model.dessert as |fooditem|}}
-			{{view-fooditem fooditem=fooditem}}
+			{{view-fooditem fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+
 		{{/each}}
 	{{/if}}
 	{{#if snacksview}}
 		<h2>Snacks</h2>
 		{{#each model.snacks as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
+			{{admin-view fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if alcoholview}}
 		<h2>Alcoholic Drinks</h2>
 		{{#each model.alcohol as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
+			{{admin-view fooditem=fooditem editItem="editItem"}}
+			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 

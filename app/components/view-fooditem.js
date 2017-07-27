@@ -6,6 +6,8 @@ export default Ember.Component.extend({
 	actions: {
 		addToCart(item) {
 			this.get('orderBasket').add(item);
+			var fooditem_id='#'+item.id;
+			$(fooditem_id).hide();
 		}
 	}
 });

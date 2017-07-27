@@ -50,6 +50,15 @@ export default Ember.Component.extend({
     'veganview':false,'dessertview':true,'snacksview':false,'alcoholview':false,'breakfastview':false,})
 
   },
+  editItem(params, fooditem){
+    this.sendAction('editItem',params,fooditem)
+  },
+  delete(fooditem){
+    if(confirm("Are you sure")){
+      this.sendAction('delete', fooditem);  
+    }
+
+  }
     }
 
 });
