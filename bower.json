@@ -2,9 +2,19 @@
   "name": "mlo-safi",
   "description": "Small description for mlo-safi goes here",
   "main": "",
-  "authors": ["Victor Ngeno <ngenovictor321@gmail.com>"],
+  "authors": [
+    "Victor Ngeno <ngenovictor321@gmail.com>"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/ngenovictor/mlo-safi",
-  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
-  "dependencies": {}
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember-simple-auth": "0.8.0"
+  }
 }
