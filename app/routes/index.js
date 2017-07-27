@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  firebase: Ember.inject.service(),
   model() {
     return Ember.RSVP.hash({
       mainmeal:this.store.query('fooditem', {
@@ -44,6 +45,22 @@ export default Ember.Route.extend({
       newOrder.save();
       this.transitionTo('index');
     },
+    signIn(params){
+      this.get('session').open('firebase',{
+        provider:"password",
+        email:params.email,
+        password:params.password
+      })
+.catch(function(error){
+  console.log("Error"+error)
+  alert("Please enter the correct details!")
+
+});
+},
+      signOut(){
+        this.get('session').close();
+      },
+
     submitReview(params){
       var newReview = this.store.createRecord('review', params);
       newReview.save();

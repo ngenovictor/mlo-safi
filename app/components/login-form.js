@@ -1,13 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  firebase: Ember.inject.service(),
   actions:{
-    submit(){
-      var credentials = {
-        identification:this.get('identification'),
+    signIn(){
+      var params = {
+        email:this.get('email'),
         password:this.get('password')
       };
-      this.sendAction('action', credentials);
+
+      this.sendAction('signIn', params);
     }
   }
 });
