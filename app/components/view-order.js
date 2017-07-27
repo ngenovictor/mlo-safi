@@ -69,7 +69,8 @@ export default Ember.Component.extend({
         table:this.get('assistancetable'),
         name:this.get('assistancename')
       }
-      var smsurl = 'https://rest.nexmo.com/sms/json?api_key=de9c4c39&api_secret=8d31b1e81a2d9d80&to=254721717141&from="NEXMO"&text="Assistance needed at table '+params.table+' by '+params.name+' "';
+      var message = 'Assistance needed at table '+params.table+' by '+params.name+'Mlo SAfi         .'; 
+      var smsurl = 'https://rest.nexmo.com/sms/json?api_key=de9c4c39&api_secret=8d31b1e81a2d9d80&to=254721717141&from="NEXMO"&text="'+message+'"';
       $.ajax({
         url:smsurl
       })
