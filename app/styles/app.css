@@ -32,6 +32,19 @@ div.admin-products .top-bar {
 div.jumbotron.orders {
   padding: 5px;
 }
+#review-button{
+  /*border:1px solid grey;*/
+  width:100%;
+  padding: 20px 0px 10px 0px;
+  text-align: center;
+  background-color: rgba(255,0,0,0.4);
+  cursor: pointer;
+  margin-top: 5px;
+}
+#review-button:hover{
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+}
 
 
 /*Victor*/
