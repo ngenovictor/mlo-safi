@@ -1,16 +1,9 @@
-<div >
-  <form>
-    <div class="form-group">
-      <label for="password">Email</label>
-      {{input value=email class="form-control"}}
-
-    </div>
-    <div class="form-group">
-      <label for="password">Pasword</label>
-      {{input type="password" value=password class="form-control"}}
-
-    </div>
-    <button {{action 'signIn'}}>Sign in</button>
-  </form>
-
-</div>
+<form class="navbar-form navbar-left">
+  <div class="form-group">
+    {{input value=email class="form-control" placeholder="Email Address"}}
+  </div>
+  <div class="form-group">
+    {{input type="password" value=password class="form-control" placeholder="password"}}
+  </div>
+  <button type="submit" class="btn btn-default" {{action 'signIn'}}>Sign In</button>
+</form>
