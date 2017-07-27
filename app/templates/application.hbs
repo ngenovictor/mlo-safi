@@ -1,3 +1,5 @@
+<!-- Part 1: Wrap all page content here -->
+<div id="wrap">
 <!-- Header section -->
   <nav class="navbar navbar-inverse">
     <div class="navbar-header">
@@ -24,20 +26,29 @@
         </li>
         <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
+
+    </ul>
+
+    <ul class="nav navbar-nav pull-right">
+      <li>{{#link-to 'login'}}<span class="glyphicon glyphicon-user"></span> Sign Up{{/link-to}}</li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+
+
   </nav>
+<div class="container">
   {{outlet}}
+
+  <div id="push"></div>
+
+</div>
 
 <!-- /#Header section -->
 
 <!-- Footer Section-->
 
-<footer id="footer">
+<footer class="footer">
   <div class="container">
     <div class="row">
       <br>
@@ -96,3 +107,4 @@
   </div>
 </footer>
 <!-- /#footer -->
+</div>
