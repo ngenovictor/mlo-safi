@@ -14,6 +14,8 @@ export default Ember.Component.extend({
   actions: {
     removeItem(item) {
       this.get('orderBasket').remove(item);
+      var item_id = "#"+item.id;
+      $(item_id).show();
     },
     showmodal(){
        $('#myModal').modal('show');
