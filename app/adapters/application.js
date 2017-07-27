@@ -1,5 +1,4 @@
-import Ember from 'ember';
+import FirebaseAdapter from 'emberfire/adapters/firebase';
 
-export default Ember.Route.extend({
-
+export default FirebaseAdapter.extend({
 });
