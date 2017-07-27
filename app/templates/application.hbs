@@ -21,16 +21,15 @@
           <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
         {{/if}}
       </ul>
-
-      <ul class="nav navbar-nav pull-right">
-        {{#if session.isAuthenticated}}
-        <li><a href="#" {{action 'signOut'}}>sign Out</a></li>
-        {{else}}
-        {{login-form signIn='signIn'}}
-        {{/if}}
-      </ul>
-    </div>
-  </nav>
+    <ul class="nav navbar-nav pull-right">
+      {{#if session.isAuthenticated}}
+      <li><a href="#" {{action 'signOut'}}>sign Out</a></li>
+      {{else}}
+      {{login-form signIn='signIn'}}
+      {{/if}}
+    </ul>
+  </div>
+</nav>
 <div class="container">
   {{outlet}}
 
@@ -75,11 +74,11 @@
           <h4 class="footertext">Contact us</h4>
           <div id="ikons">
           <ul class="list-inline center-block social">
-            <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-            <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-            <li> <a href="#"> <i class="fa fa-envelope-o">   </i> </a> </li>
-            <li> <a href="#"> <i class="fa fa-github">   </i> </a> </li>
-            <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+            <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+            <li> <a href="mlosafi123@gmail.com"> <i class="fa fa-envelope-o">   </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-github">   </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
           </ul>
         </div>
         </center>
