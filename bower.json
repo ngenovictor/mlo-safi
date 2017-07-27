@@ -15,10 +15,7 @@
     "tests"
   ],
   "dependencies": {
-<<<<<<< HEAD
-    "moment": "momentjs#^2.18.1"
-=======
+    "moment": "momentjs#^2.18.1",
     "ember-simple-auth": "0.8.0"
->>>>>>> b663ec819bac8eba85e6212c4d1ce92cdb9fbcc9
   }
 }
