@@ -19,12 +19,16 @@
         <li>{{#link-to  'serveorder' }}Waiter{{/link-to}}</li>
         <li>{{#link-to  'payment' }}Payment{{/link-to}}</li>
 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
+
+    </ul>
+
+    <ul class="nav navbar-nav pull-right">
+      <li>{{#link-to 'login'}}<span class="glyphicon glyphicon-user"></span> Sign Up{{/link-to}}</li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+
+
   </nav>
 <div class="container">
   {{outlet}}

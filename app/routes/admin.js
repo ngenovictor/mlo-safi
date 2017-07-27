@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 			mainmeal:this.store.query('fooditem', {
 				orderBy: 'category',
 				equalTo: 'mainmeal',
-				
+
 			}),
 			alcohol:this.store.query('fooditem',{
 				orderBy:'category',
@@ -45,6 +45,18 @@ export default Ember.Route.extend({
 			var newFoodItem = this.store.createRecord('fooditem', params);
 			newFoodItem.save();
 			this.transitionTo('admin');
+		},
+		editItem(params,fooditem){
+			Object.keys(params).forEach(function (key) {
+        if (params[key]!==undefined) {
+          fooditem.set(key,params[key]);
+        }
+      });
+      fooditem.save();
+		},
+		delete(fooditem){
+			fooditem.destroyRecord();
+      this.transitionTo('admin');
 		}
 	}
 });
