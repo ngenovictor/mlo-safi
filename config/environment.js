@@ -22,10 +22,7 @@ module.exports = function(environment) {
       databaseURL: "https://mlo-safi.firebaseio.com",
       storageBucket: "mlo-safi.appspot.com"
     },
-    firebase: 'https://<APP-NAME>.firebaseio.com/',
-    torii: {
-      sessionServiceName: 'session',
-    },
+
 
     APP: {
       // Here you can pass flags/options to your application instance
