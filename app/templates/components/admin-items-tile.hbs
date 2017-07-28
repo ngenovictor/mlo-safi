@@ -41,9 +41,10 @@
 			<div class="row adminviewjumbo">
 				{{view-fooditem fooditem=fooditem}}
 				{{admin-view fooditem=fooditem editItem="editItem"}}
-				<div>
+					<br>
 					<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 				</div>
+				<div>
 			</div>
 		{{/each}}
 	{{/if}}
