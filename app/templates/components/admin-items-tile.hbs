@@ -34,10 +34,6 @@
 	{{#if mainmealview}}
 		<h2>Main Meal</h2>
 		{{#each model.mainmeal as |fooditem|}}
-			{{view-fooditem fooditem=fooditem}}
-			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<br>
-			<button class="btn btn-danger" {{action 'delete' fooditem}}>Delete Fooditem</button>
 			<div class="row adminviewjumbo">
 				{{view-fooditem fooditem=fooditem}}
 				{{admin-view fooditem=fooditem editItem="editItem"}}
