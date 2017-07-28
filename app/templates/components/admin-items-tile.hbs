@@ -35,7 +35,8 @@
 		{{#each model.mainmeal as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
 			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<br>
+			<button class="btn btn-danger" {{action 'delete' fooditem}}>Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if breakfastview}}
