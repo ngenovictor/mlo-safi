@@ -69,7 +69,6 @@ div.jumbotron.orders {
 
 .tyrion {
 	text-align: center;
-	background-image: url("");
 	background-repeat: no-repeat;
   background-size: 100% 250px;
 }
@@ -206,10 +205,10 @@ body {
 
 /*Derrick*/
 
-@import url(https://fonts.googleapis.com/css?family=Abril Fatface);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-   font-family: 'Abril Fatface';
+   font-family: 'Open Sans',serif;
 }
 
 /*Derrick*/
