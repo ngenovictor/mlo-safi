@@ -58,6 +58,14 @@ div.jumbotron.orders {
   text-align: center;
   font-weight: bolder;
 }
+.adminviewjumbo{
+  background-color: rgb(228, 231, 219);
+  margin: 0px;
+  margin-top:2%;
+}
+div.row.food-item{
+  margin:0px 15px 0px 15px !important;
+}
 /*Victor*/
 
 
