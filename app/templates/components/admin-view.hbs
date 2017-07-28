@@ -32,7 +32,7 @@
 			</div>
 			<div class="form-group">
 				<label for="preparation_time">Time to Prepare:</label>
-				{{input type="time" name="preparation_time" id="preparation_time" class="form-control v" value=preparation_time}}
+				{{input type="number" name="preparation_time" id="preparation_time" class="form-control v" value=preparation_time}}
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -53,6 +53,6 @@
 	</form>
 {{else}}
 	<div class="col-md-9">
-			<button class="btn btn-default v" {{action 'editForm'}}>Edit Food Item</button>
+			<button class="btn btn-info" {{action 'editForm'}}>Edit Food Item</button>
 	</div>
 {{/if}}

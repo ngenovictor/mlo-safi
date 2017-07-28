@@ -30,12 +30,18 @@
 
 </div>
 <div class="col-md-9">
+
 	{{#if mainmealview}}
 		<h2>Main Meal</h2>
 		{{#each model.mainmeal as |fooditem|}}
-			{{view-fooditem fooditem=fooditem}}
-			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<div class="row adminviewjumbo">
+				{{view-fooditem fooditem=fooditem}}
+				{{admin-view fooditem=fooditem editItem="editItem"}}
+					<br>
+					<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
+				</div>
+				<div>
+			</div>
 		{{/each}}
 	{{/if}}
 	{{#if breakfastview}}
@@ -43,7 +49,7 @@
 		{{#each model.breakfast as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
 			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if hotdrinksview }}
@@ -51,7 +57,7 @@
 		{{#each model.hotdrinks as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
 			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if colddrinksview}}
@@ -59,7 +65,7 @@
 		{{#each model.colddrinks as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
 			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if veganview}}
@@ -67,14 +73,14 @@
 		{{#each model.vegan as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
 			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if dessertview}}
 		<h2>Dessert</h2>
 		{{#each model.dessert as |fooditem|}}
 			{{view-fooditem fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 
 		{{/each}}
 	{{/if}}
@@ -83,7 +89,7 @@
 		{{#each model.snacks as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
 			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 	{{#if alcoholview}}
@@ -91,7 +97,7 @@
 		{{#each model.alcohol as |fooditem|}}
 			{{view-fooditem fooditem=fooditem}}
 			{{admin-view fooditem=fooditem editItem="editItem"}}
-			<button {{action 'delete' fooditem}}>Delete Fooditem</button>
+			<button {{action 'delete' fooditem}} class="btn btn-danger">Delete Fooditem</button>
 		{{/each}}
 	{{/if}}
 
