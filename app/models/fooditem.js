@@ -6,6 +6,5 @@ export default DS.Model.extend({
 	price: DS.attr(),
 	category: DS.attr(),
 	image: DS.attr(),
-	preparation_time: DS.attr(),
-	quantity: DS.attr()
+	preparation_time: DS.attr()
 });

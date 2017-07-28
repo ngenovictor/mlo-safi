@@ -36,10 +36,20 @@
 			<button type="submit" {{action 'makeOrder'}} clas>Place Order</button>
 		</form>
 	{{/if}}
-	<div id="review-button" {{action 'callAssistance'}}>
+  <script type="text/javascript">
+    function showReviewmodal(){
+
+      $('#myModal').modal('show');
+    }
+    function showAssistancemodal(){
+
+      $('#assistancemodal').modal('show');
+    }
+  </script>
+	<div id="review-button" onclick="showAssistancemodal()">
 		<p>Call For Assistance</p>
 	</div>
-	<div id="review-button" {{action 'review'}}>
+	<div id="review-button" onclick="showReviewmodal()">
 		<p>Leave Feedback</p>
 	</div>
 </div>
